@@ -124,6 +124,11 @@ samp {
   color: #9a9a9a;
   font-size: 14px;
 }
+
+.red {
+  color: red;
+  font-size: 14px;
+}
 /**
    * Add the correct font size in all browsers.
    */
@@ -759,7 +764,7 @@ button,
   display: inline-block;
   border: 1px solid pink;
   border-radius: 4px;
-  background: pink;
+  background: rgb(247, 89, 115);
   color: #ffffff;
   font-weight: 600;
   font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
@@ -782,7 +787,7 @@ button:hover,
 [type='reset']:hover,
 [type='button']:hover {
   border: 1px solid rgb(254, 171, 185);
-  background: rgb(254, 171, 185);
+  background: rgb(252, 107, 143);
   color: #ffffff;
   text-decoration: none;
 }
@@ -800,7 +805,7 @@ button:active,
 [type='button']:focus,
 [type='button']:active {
   border: 1px solid rgb(254, 171, 185);
-  background: rgb(254, 171, 185);
+  background: rgb(247, 115, 137);
   color: #ffffff;
   text-decoration: none;
 }
