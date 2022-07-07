@@ -10,6 +10,7 @@ export const Navbar = () => {
         <div className="navContent">
           <div className="navLinks">
             <Link to="/">帖子列表</Link>
+            <Link to="/users">用户列表</Link>
           </div>
         </div>
       </section>
