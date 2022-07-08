@@ -62,6 +62,8 @@ nav a:hover {
 
 .navLinks {
   display: flex;
+  height: 42px;
+  padding-top: 5px;
 }
 
 .navLinks a {

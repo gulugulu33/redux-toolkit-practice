@@ -1,7 +1,28 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import {
+  fetchNotifications,
+  selectAllNotifications,
+} from '../features/notifications/notificationsSlice'
 
 export const Navbar = () => {
+  const dispatch = useDispatch()
+  const notifications = useSelector(selectAllNotifications)
+  const numUnreadNotifications = notifications.filter((n) => !n.read).length
+
+  const fetchNewNotifications = () => {
+    dispatch(fetchNotifications())
+  }
+
+  let unreadNotificationsBadge
+
+  if (numUnreadNotifications > 0) {
+    unreadNotificationsBadge = (
+      <span className="badge">{numUnreadNotifications}</span>
+    )
+  }
+
   return (
     <nav>
       <section>
@@ -11,7 +32,11 @@ export const Navbar = () => {
           <div className="navLinks">
             <Link to="/">帖子列表</Link>
             <Link to="/users">用户列表</Link>
+            <Link to="/notifications">通知列表{unreadNotificationsBadge}</Link>
           </div>
+          <button className="button" onClick={fetchNewNotifications}>
+            刷新通知
+          </button>
         </div>
       </section>
     </nav>
