@@ -17,7 +17,7 @@ const EditPostForm = memo(({ match }) => {
   const dispatch = useDispatch()
 
   const onTitleChanged = (e) => setTitle(e.target.value)
-  const onContentChanged = (e) => setContent(e.target.value)
+  const onContentChanged = (e) => setContent(e.target.value) 
 
   const onSavePostClicked = () => {
     if (title && content) {
